@@ -1,0 +1,53 @@
+@import 'tailwindcss';
+
+:root {
+  font-family: 'Outfit', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-optical-sizing: auto;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color-scheme: light dark;
+
+  --foreground: #fde6e2;
+  --background: #130501;
+  --pc: #9868c3;
+
+  color: var(--foreground);
+  background-color: var(--background);
+}
+
+.set-width {
+  @apply max-w-5xl mx-auto px-4 sm:px-6;
+}
+
+#root {
+  @apply min-h-screen flex flex-col items-center;
+}
+
+button {
+  @apply rounded-lg cursor-pointer text-base font-semibold px-4 py-2 transition-colors border border-[var(--pc)] shadow-sm;
+}
+button:hover {
+  @apply bg-[var(--pc)] text-white;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+input {
+  @apply rounded-lg border border-[var(--pc)] shadow-sm px-3 py-2  max-w-3xs w-full;
+}
+
+input:focus,
+input:focus-visible {
+  @apply outline-2 outline-offset-2 outline-[var(--pc)] caret-[var(--pc)];
+}
+
+input:user-invalid {
+  @apply border-red-500 outline-red-500;
+}
